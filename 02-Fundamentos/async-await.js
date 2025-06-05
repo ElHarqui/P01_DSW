@@ -12,7 +12,6 @@ const empleados = [
         id: 3,
         nombre: 'Karen'
     }
-
 ];
 // creamos otro arreglo de salarios de solo dos elementos.
 const salarios = [
@@ -24,16 +23,16 @@ const salarios = [
         id: 2,
         salario: 1500
     }
- ];
+];
 //getEmpleado transformado en promesa, ya no es necesario el callback.
 // se define la promesa con dosr argumentos resolve si no hay error, reject si hay error
 //se busca el empleado retorna el nombre si existe llamo al empleado, caso contrario el error
- const getEmpleado = (id) => {
-    return new  Promise((resolve, reject) => {
+const getEmpleado = (id) => {
+    return new Promise((resolve, reject) => {
         const empleado = empleados.find(e => e.id === id)?.nombre;
         (empleado)
-           ? resolve(empleado)
-           :reject (`No existe Empleado con Id ${id}`);
+            ? resolve(empleado)
+            :reject (`No existe Empleado con Id ${id}`);
         
     });
         
